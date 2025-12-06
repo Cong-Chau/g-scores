@@ -1,33 +1,41 @@
-G-Scores Project — Setup Guide
+🚀 G-SCORES PROJECT — SETUP GUIDE
 
-1. Tạo Database MySQL
+1. 🗄️ Tạo Database MySQL
 
-Mở terminal hoặc MySQL Workbench và chạy:
+Mở Terminal hoặc MySQL Workbench và chạy lệnh:
 
-    CREATE DATABASE g_scores CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+    CREATE DATABASE g_scores 
+    CHARACTER SET utf8mb4 
+    COLLATE utf8mb4_unicode_ci;
 
-2. Cài đặt & chạy Backend (g-scores-backend)
+2. ⚙️ Cài đặt và chạy Backend (g-scores-backend)
 
-Bước 1: Di chuyển vào thư mục backend
-cd g-scores-backend
+➤ Di chuyển vào thư mục backend
 
-Bước 2: Chạy migration để tạo bảng
-npx sequelize-cli db:migrate
+    cd g-scores-backend
 
-Bước 3: Seed dữ liệu từ CSV vào database
-npx sequelize-cli db:seed:all
+➤ Chạy migration để tạo bảng
 
-Bước 4: Run backend
-npm run dev
+    npx sequelize-cli db:migrate
+
+➤ Chạy seeder để insert dữ liệu từ CSV
+
+    npx sequelize-cli db:seed:all
+
+➤ Khởi chạy backend
+
+    npm run dev
 
 Backend mặc định chạy tại: http://localhost:3000
 
-3. Chạy Frontend (g-scores-frontend)
+3. 🎨 Chạy Frontend (g-scores-frontend)
 
-Bước 1: Di chuyển vào thư mục frontend
-cd g-scores-frontend
+➤ Di chuyển vào thư mục frontend
 
-Bước 2: Chạy frontend
-npm run dev
+    cd g-scores-frontend
 
-Frontend chạy tại: http://localhost:5173
+➤ Chạy frontend
+
+    npm run dev
+
+Frontend mặc định chạy tại: http://localhost:5173
