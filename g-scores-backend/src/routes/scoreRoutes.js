@@ -11,6 +11,29 @@ const controller = require("../controllers/scoreController");
 
 /**
  * @swagger
+ * /api/scores:
+ *   get:
+ *     summary: Lấy danh sách điểm có phân trang
+ *     tags: [Scores]
+ *     parameters:
+ *       - in: query
+ *         name: page
+ *         schema:
+ *           type: integer
+ *           example: 1
+ *       - in: query
+ *         name: limit
+ *         schema:
+ *           type: integer
+ *           example: 10
+ *     responses:
+ *       200:
+ *         description: Thành công
+ */
+router.get("/", controller.getScoresPaginated);
+
+/**
+ * @swagger
  * /api/scores/check/{registrationNumber}:
  *   get:
  *     summary: Tra cứu điểm theo số báo danh
