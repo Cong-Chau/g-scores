@@ -31,6 +31,7 @@ Mở Terminal hoặc MySQL Workbench và chạy lệnh:
     npm run dev
 
 Backend mặc định chạy tại: http://localhost:3000
+
 Có thể kiểm tra API tại: http://localhost:3000/api-docs
 
 3.  Chạy Frontend (g-scores-frontend)
