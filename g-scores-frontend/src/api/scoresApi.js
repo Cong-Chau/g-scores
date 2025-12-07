@@ -9,6 +9,7 @@ const scoreApi = {
     axiosClient.get(`/api/scores/check/${registrationNumber}`),
   getReportBySubject: (subject) =>
     axiosClient.get(`/api/scores/report/${subject}`),
+  getTopGroupA: () => axiosClient.get("/api/scores/top-group-a"),
 };
 
 export default scoreApi;

@@ -53,6 +53,9 @@ exports.topGroupA = async () => {
   return await Score.findAll({
     attributes: [
       "registrationNumber",
+      "math",
+      "physics",
+      "chemistry",
       [Sequelize.literal("math + physics + chemistry"), "totalScore"],
     ],
     order: [[Sequelize.literal("totalScore"), "DESC"]],
