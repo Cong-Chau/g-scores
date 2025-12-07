@@ -10,15 +10,15 @@ import {
 } from "recharts";
 
 const subjects = [
-  { id: "math" },
-  { id: "literature" },
-  { id: "foreignLanguage" },
-  { id: "physics" },
-  { id: "chemistry" },
-  { id: "biology" },
-  { id: "history" },
-  { id: "geography" },
-  { id: "civicEducation" },
+  { id: "math", string: "Toán" },
+  { id: "literature", string: "Ngữ văn" },
+  { id: "foreignLanguage", string: "Ngoại ngữ" },
+  { id: "physics", string: "Vật lý" },
+  { id: "chemistry", string: "Hóa học" },
+  { id: "biology", string: "Sinh học" },
+  { id: "history", string: "Lịch sử" },
+  { id: "geography", string: "Địa lý" },
+  { id: "civicEducation", string: "GDCD" },
 ];
 
 const COLORS = ["#4f46e5", "#06b6d4", "#10b981", "#f59e0b"];
@@ -71,7 +71,7 @@ function ChartLevel() {
             >
               {subjects.map((s) => (
                 <option key={s.id} value={s.id}>
-                  {s.id}
+                  {s.string}
                 </option>
               ))}
             </select>
